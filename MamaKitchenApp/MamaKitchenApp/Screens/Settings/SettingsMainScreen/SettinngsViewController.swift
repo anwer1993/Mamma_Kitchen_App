@@ -69,10 +69,22 @@ class SettinngsViewController: UIViewController {
         logoutStackView.addTagGesture(logoutTap)
         let aboutUsTap = UITapGestureRecognizer(target: self, action: #selector(handleAboutUsTap(_:)))
         aboutUSStackView.addTagGesture(aboutUsTap)
+        let contactUsTap = UITapGestureRecognizer(target: self, action: #selector(handleContactUsTap(_:)))
+        contactUsStackView.addTagGesture(contactUsTap)
+        let profileTap = UITapGestureRecognizer(target: self, action: #selector(handleProfileTap(_:)))
+        profileStackView.addTagGesture(profileTap)
     }
     
     @objc func handleAboutUsTap(_ sender: UITapGestureRecognizer? = nil) {
         Router.shared.present(screen: .AboutUs, modalePresentatioinStyle: .fullScreen, completion: nil)
+    }
+    
+    @objc func handleContactUsTap(_ sender: UITapGestureRecognizer? = nil) {
+        Router.shared.present(screen: .ContactUs, modalePresentatioinStyle: .fullScreen, completion: nil)
+    }
+    
+    @objc func handleProfileTap(_ sender: UITapGestureRecognizer? = nil) {
+        Router.shared.present(screen: .Register(source: .fromSettings), modalePresentatioinStyle: .fullScreen, completion: nil)
     }
     
     @objc func handleLogoutTap(_ sender: UITapGestureRecognizer? = nil) {

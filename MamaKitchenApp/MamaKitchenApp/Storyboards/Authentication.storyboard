@@ -677,7 +677,7 @@
     </scenes>
     <resources>
         <image name="back_arrow" width="41.5" height="33"/>
-        <image name="background_app" width="1500" height="3248"/>
+        <image name="background_app" width="563" height="1218"/>
         <image name="def_pic" width="225" height="225"/>
         <image name="logo_app" width="600" height="600"/>
         <image name="logo_app_inside" width="4397" height="4307"/>

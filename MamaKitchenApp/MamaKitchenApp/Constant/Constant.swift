@@ -10,5 +10,5 @@ import Foundation
 
 class Tools  {
     
-    static  var BASE_URL = "https://echo.sa/projects/MamasKitchen/public/api"
+    static  var BASE_URL = "https://echo.sa/projects/MamasKitchen/public/"
 }

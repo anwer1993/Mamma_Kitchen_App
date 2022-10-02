@@ -28,6 +28,15 @@ extension UIViewController {
         self.present(alert, animated: true)
     }
     
+    func showAlertWithOk(withTitle title: String, withMessage message: String, confirmAction: @escaping() -> Void) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OkAction = UIAlertAction(title: "Confirm", style: .default) { _ in
+            confirmAction()
+        }
+        alert.addAction(OkAction)
+        self.present(alert, animated: true)
+    }
+    
     func showOrHideLoader(done: Bool) {
         if done {
             dismiss(animated: false, completion: nil)

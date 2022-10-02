@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RegisterViewController: UIViewController, Storyboarded {
     
@@ -47,13 +48,27 @@ class RegisterViewController: UIViewController, Storyboarded {
     @IBOutlet weak var backButton: UIButton!
     
     
+    var source: SourceEnum = .none
+    var profile: ProfileModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
         let tap  =  UITapGestureRecognizer(target: self, action: #selector(loginLblDidTapped(_:)))
         loginLabel.addTagGesture(tap)
+        if source == .fromSettings{
+            updateUIWithData(profile: AccountManager.sharedInstance.profile)
+            self.profile =  AccountManager.sharedInstance.profile
+            loginLabel.isHidden = true
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if source == .fromSettings {
+            getProfile()
+        }
     }
     
     func initView() {
@@ -90,17 +105,57 @@ class RegisterViewController: UIViewController, Storyboarded {
         backButton.tintColor = UIColor.kelleyGreen
     }
     
+    func updateUIWithData(profile: ProfileModel?) {
+        if let profile = profile {
+            nameTextField.text = profile.firstName
+            lastNameTextField.text = profile.lastName
+            restaurantTextFieldd.text = profile.restaurantName
+            passwordTextField.text = AccountManager.sharedInstance.password
+            phoneTextField.text = profile.phone
+            emailTextField.text = profile.email
+            adressTextField.text = profile.address
+            registerBtn.setTitle("Confirm", for: .normal)
+            if  let picture = profile.picture {
+                let url = URL(string: "\(Tools.BASE_URL)\(picture)")
+                profileImage.kf.setImage(with: url)
+                profileImage.contentMode = .scaleAspectFill
+            }
+        }
+    }
+    
     @objc func loginLblDidTapped(_ sender: UITapGestureRecognizer? = nil) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func registerBtnDidTapped(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        if source ==  .fromSettings {
+            do {
+                let name = try nameTextField.validatedText(validationType: .name)
+                let lastNamee = try lastNameTextField.validatedText(validationType: .name)
+                let  restaurantName = try restaurantTextFieldd.validatedText(validationType: .name)
+                _ = try passwordTextField.validatedText(validationType: .name)
+                let phone = try phoneTextField.validatedText(validationType: .name)
+                let email = try emailTextField.validatedText(validationType: .email)
+                let address = try adressTextField.validatedText(validationType: .name)
+                let editedProfile = ProfileModel(id: self.profile?.id, firstName: name, lastName: lastNamee, phone: phone, restaurantName: restaurantName, picture: nil, code: profile?.code, deviceToken: profile?.deviceToken, email: email, address: address, longitude: profile?.longitude, latitude: profile?.latitude, emailVerifiedAt: nil, idNumber: profile?.idNumber, idPicture: nil, bank: nil, iban: nil, isPhoneVerified: nil, isApproved: nil, isActive: nil, isBanned: nil, isNotifiable: nil, userType: nil, createdAt: nil, updatedAt: nil)
+                updateProfile(profile: editedProfile)
+            } catch (let error) {
+                showAlert(for: (error as! ValidationError).message)
+            }
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
     }
     
     
     @IBAction func backBtnDidTapped(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        if source == .fromSettings {
+            self.dismiss(animated: true)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

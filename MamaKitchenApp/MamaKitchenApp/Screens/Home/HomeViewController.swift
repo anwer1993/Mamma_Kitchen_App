@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
         initView()
-        // Do any additional setup after loading the view.
+        getProfile()
     }
     
     func initView() {

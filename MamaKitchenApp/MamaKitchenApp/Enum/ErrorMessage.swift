@@ -11,6 +11,7 @@ enum ErrorMessage: String {
     
     case INVALID_CREDENTIALS
     case INVALID_OTP
+    case SESSION_EXPIRED
     
     var title: String {
         return "Oops"
@@ -22,6 +23,8 @@ enum ErrorMessage: String {
             return "Invalid credentials"
         case .INVALID_OTP:
             return "Invalid verification code"
+        case .SESSION_EXPIRED:
+            return "Session expired"
         }
     }
 }

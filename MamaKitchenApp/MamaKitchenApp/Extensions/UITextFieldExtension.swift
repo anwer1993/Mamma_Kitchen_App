@@ -62,3 +62,11 @@ extension UITextField {
         return try validator.validated(self.text!)
     }
 }
+
+
+extension UITextView {
+    func validatedTextView(validationType: ValidatorType) throws -> String {
+        let validator = ValidatorFactory.validatorFor(type: validationType)
+        return try validator.validated(self.text!)
+    }
+}

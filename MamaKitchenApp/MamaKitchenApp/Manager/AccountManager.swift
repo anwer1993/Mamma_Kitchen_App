@@ -12,6 +12,8 @@ class AccountManager {
     
     static var sharedInstance = AccountManager()
     
+    var profile: ProfileModel?
+    
     var token: String? {
         get {
             return UserDefaults.standard.string(forKey: "token")

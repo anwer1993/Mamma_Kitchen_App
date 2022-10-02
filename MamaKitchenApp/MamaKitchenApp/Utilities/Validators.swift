@@ -22,6 +22,8 @@ protocol ValidatorConvertible {
 enum ValidatorType {
     case email
     case password
+    case name
+    case message
 }
 
 enum ValidatorFactory {
@@ -29,6 +31,8 @@ enum ValidatorFactory {
         switch type {
         case .email: return EmailValidator()
         case .password: return PasswordValidator()
+        case .name: return NameValidator()
+        case .message:  return MessageValidator()
         }
     }
 }
@@ -57,6 +61,20 @@ struct PasswordValidator: ValidatorConvertible {
     func validated(_ value: String) throws -> String {
         guard value != "" else {throw ValidationError("Password is Required")}
         guard value.count >= 6 else { throw ValidationError("Password must have at least more than 6 characters") }
+        return value
+    }
+}
+
+struct NameValidator: ValidatorConvertible {
+    func validated(_ value: String) throws -> String {
+        guard value != "" else {throw ValidationError("Your name is Required, please enter your name")}
+        return value
+    }
+}
+
+struct MessageValidator: ValidatorConvertible {
+    func validated(_ value: String) throws -> String {
+        guard value != "" else {throw ValidationError("The message is Required, please fill the message field")}
         return value
     }
 }

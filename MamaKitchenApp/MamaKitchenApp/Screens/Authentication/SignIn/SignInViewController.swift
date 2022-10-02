@@ -84,7 +84,7 @@ class SignInViewController: UIViewController, Storyboarded {
     }
     
     @objc func showRegistrationScreen(_ sender: UITapGestureRecognizer? = nil) {
-        Router.shared.push(with: self.navigationController, screen: .Register, animated: true)
+        Router.shared.push(with: self.navigationController, screen: .Register(source: SourceEnum.none), animated: true)
     }
     
     @IBAction func signInBtnDidTapped(_ sender: Any) {

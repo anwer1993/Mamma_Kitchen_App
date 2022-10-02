@@ -16,10 +16,11 @@ protocol INaviagtion{}
 enum AppScreen: INaviagtion{
     case Login
     case Verification
-    case Register
+    case Register(source: SourceEnum? = nil)
     case ForgotPassword
     case Tabbar
     case AboutUs
+    case ContactUs
 }
 
 /// Class responsible for the routing functionality
@@ -60,8 +61,9 @@ struct Router: IRouter {
                 guard let vc = VerificationViewController.instantiate(storyboardName: "Authentication") else {return UIViewController()}
                 viewController = vc
                 break
-            case .Register:
+            case .Register(source: let source):
                 guard let vc = RegisterViewController.instantiate(storyboardName: "Authentication") else {return UIViewController()}
+                vc.source = source ?? .none
                 viewController = vc
                 break
             case .ForgotPassword:
@@ -74,6 +76,10 @@ struct Router: IRouter {
                 break
             case .AboutUs:
                 guard let vc = AboutUsViewController.instantiate(storyboardName: "Main") else {return UIViewController()}
+                viewController = vc
+                break
+            case .ContactUs:
+                guard let vc = ContactUsViewController.instantiate(storyboardName: "Main") else {return UIViewController()}
                 viewController = vc
                 break
             }
