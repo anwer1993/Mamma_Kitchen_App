@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.6.2)
+  - CountryPickerView (3.2.0)
+  - Kingfisher (7.3.2)
+  - OTPFieldView (1.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - CountryPickerView (~> 3.2.0)
+  - Kingfisher
+  - OTPFieldView
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CountryPickerView
+    - Kingfisher
+    - OTPFieldView
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  CountryPickerView: 9b093bfffb4b06a69ba6185a798cadbf863720e7
+  Kingfisher: 0086ad83719761ba9b2cdaf6ef4d5b4878cbae23
+  OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
+
+PODFILE CHECKSUM: 95db8042d8c6923479856b00cbc01396bf872b59
+
+COCOAPODS: 1.11.2
