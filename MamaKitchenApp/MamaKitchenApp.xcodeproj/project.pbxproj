@@ -46,6 +46,8 @@
 		A677655E28EA1111008A947A /* ProfileServerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677655D28EA1111008A947A /* ProfileServerResponseModel.swift */; };
 		A677656028EA1243008A947A /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677655F28EA1243008A947A /* ProfileService.swift */; };
 		A677656428EA1802008A947A /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677656328EA1802008A947A /* HomeData.swift */; };
+		A67DF5BC28F3021900BC991B /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF5BB28F3021900BC991B /* FoodService.swift */; };
+		A67DF5BE28F3028700BC991B /* FoodServerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF5BD28F3028700BC991B /* FoodServerResponseModel.swift */; };
 		A67E318528E12E99003D6DEA /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67E318428E12E99003D6DEA /* UIImageViewExtension.swift */; };
 		A6E4C64928E107AD0072F108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E4C64728E107AD0072F108 /* Main.storyboard */; };
 		A6E4C64B28E107AE0072F108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6E4C64A28E107AE0072F108 /* Assets.xcassets */; };
@@ -120,6 +122,8 @@
 		A677655D28EA1111008A947A /* ProfileServerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServerResponseModel.swift; sourceTree = "<group>"; };
 		A677655F28EA1243008A947A /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		A677656328EA1802008A947A /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		A67DF5BB28F3021900BC991B /* FoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
+		A67DF5BD28F3028700BC991B /* FoodServerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodServerResponseModel.swift; sourceTree = "<group>"; };
 		A67E318428E12E99003D6DEA /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		A6E4C63E28E107AD0072F108 /* MamaKitchenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MamaKitchenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E4C64828E107AD0072F108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 			children = (
 				A66F54B728E10A9B00AA29A0 /* AuthServerResponseModels.swift */,
 				A677655D28EA1111008A947A /* ProfileServerResponseModel.swift */,
+				A67DF5BD28F3028700BC991B /* FoodServerResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 			children = (
 				A66F54C028E10ADE00AA29A0 /* AuthenticationService.swift */,
 				A677655F28EA1243008A947A /* ProfileService.swift */,
+				A67DF5BB28F3021900BC991B /* FoodService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -670,6 +676,7 @@
 				A65935AD28E50353004A5A83 /* SettingsData.swift in Sources */,
 				A66F549228E108DD00AA29A0 /* AppDelegate.swift in Sources */,
 				A66F54AD28E10A6B00AA29A0 /* UITextFieldExtension.swift in Sources */,
+				A67DF5BC28F3021900BC991B /* FoodService.swift in Sources */,
 				A66F54CC28E1135A00AA29A0 /* VerificationViewController.swift in Sources */,
 				A61C1CDA28E24435005FD708 /* TabbarViewController.swift in Sources */,
 				A65935B328E50AD4004A5A83 /* HomeViewController.swift in Sources */,
@@ -677,6 +684,7 @@
 				A66F549A28E108DD00AA29A0 /* SpalchScreen.swift in Sources */,
 				A66F54B528E10A8300AA29A0 /* Router.swift in Sources */,
 				A677655C28EA1086008A947A /* SourceEnum.swift in Sources */,
+				A67DF5BE28F3028700BC991B /* FoodServerResponseModel.swift in Sources */,
 				A66F54A528E10A4400AA29A0 /* ErrorMessage.swift in Sources */,
 				A66F54AF28E10A6B00AA29A0 /* UIViewControllerExtension.swift in Sources */,
 				A677656428EA1802008A947A /* HomeData.swift in Sources */,
