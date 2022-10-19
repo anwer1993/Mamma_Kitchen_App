@@ -17,10 +17,12 @@ enum AppScreen: INaviagtion{
     case Login
     case Verification
     case Register(source: SourceEnum? = nil)
+    case SelectLocation(delegate: UpdateLocationDelegate)
     case ForgotPassword
     case Tabbar
     case AboutUs
     case ContactUs
+    case AddNewFood
 }
 
 /// Class responsible for the routing functionality
@@ -80,6 +82,15 @@ struct Router: IRouter {
                 break
             case .ContactUs:
                 guard let vc = ContactUsViewController.instantiate(storyboardName: "Main") else {return UIViewController()}
+                viewController = vc
+                break
+            case .AddNewFood:
+                guard let vc = AddNewFoodViewController.instantiate(storyboardName: "Main") else {return UIViewController()}
+                viewController = vc
+                break
+            case .SelectLocation(delegate: let delegate):
+                guard let vc = LocationViewController.instantiate(storyboardName: "Authentication") else {return UIViewController()}
+                vc.delegate = delegate
                 viewController = vc
                 break
             }

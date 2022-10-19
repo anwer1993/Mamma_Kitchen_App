@@ -674,6 +674,66 @@
             </objects>
             <point key="canvasLocation" x="3264" y="125"/>
         </scene>
+        <!--Location View Controller-->
+        <scene sceneID="3dF-gm-bqk">
+            <objects>
+                <viewController storyboardIdentifier="LocationViewController" id="CUb-kY-IgG" customClass="LocationViewController" customModule="MamaKitchenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="80L-Us-jX6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="te4-6l-LAb">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdj-7x-RLY">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="60"/>
+                                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Select location">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerBtnDidTapped:" destination="rBF-fJ-YzE" eventType="touchUpInside" id="ZH2-vT-7u3"/>
+                                            <action selector="selectLocationDidTapped:" destination="CUb-kY-IgG" eventType="touchUpInside" id="oaT-fH-rKg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Bdj-7x-RLY" firstAttribute="top" secondItem="te4-6l-LAb" secondAttribute="top" id="897-V5-fRd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bdj-7x-RLY" secondAttribute="bottom" id="Bsh-4l-URg"/>
+                                    <constraint firstItem="Bdj-7x-RLY" firstAttribute="leading" secondItem="te4-6l-LAb" secondAttribute="leading" constant="20" id="PbP-wf-GGg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bdj-7x-RLY" secondAttribute="trailing" constant="20" id="VgE-FS-11U"/>
+                                    <constraint firstAttribute="height" constant="60" id="cUN-Nv-Jqf"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yke-gH-vMD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F7X-Ge-7nL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="te4-6l-LAb" firstAttribute="top" secondItem="yke-gH-vMD" secondAttribute="bottom" id="9bL-hc-Oec"/>
+                            <constraint firstItem="te4-6l-LAb" firstAttribute="leading" secondItem="F7X-Ge-7nL" secondAttribute="leading" id="B7o-l4-Izw"/>
+                            <constraint firstItem="F7X-Ge-7nL" firstAttribute="trailing" secondItem="yke-gH-vMD" secondAttribute="trailing" id="akN-yb-4sc"/>
+                            <constraint firstItem="F7X-Ge-7nL" firstAttribute="bottom" secondItem="te4-6l-LAb" secondAttribute="bottom" id="nsL-VX-APJ"/>
+                            <constraint firstItem="F7X-Ge-7nL" firstAttribute="trailing" secondItem="te4-6l-LAb" secondAttribute="trailing" id="tT1-oR-3Bb"/>
+                            <constraint firstItem="yke-gH-vMD" firstAttribute="leading" secondItem="F7X-Ge-7nL" secondAttribute="leading" id="vvL-Tx-fWP"/>
+                            <constraint firstItem="yke-gH-vMD" firstAttribute="top" secondItem="F7X-Ge-7nL" secondAttribute="top" id="xAG-TL-MWm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="yke-gH-vMD" id="6Eh-xf-tKC"/>
+                        <outlet property="selectLocationView" destination="te4-6l-LAb" id="TFz-LA-rsa"/>
+                        <outlet property="selectViewBtn" destination="Bdj-7x-RLY" id="XvS-Of-wcY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PdH-id-5a6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3988" y="125"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back_arrow" width="41.5" height="33"/>

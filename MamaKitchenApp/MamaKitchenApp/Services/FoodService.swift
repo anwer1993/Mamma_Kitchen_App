@@ -19,6 +19,12 @@ class FoodService {
         }
     }
     
+    func getFoodCat(completion: @escaping(FoodCategoryServerResponse?) -> Void) {
+        AF.request("\(URLRequest.FOOD_CAT_URL.url)", method: .get).validate().responseDecodable(of: FoodCategoryServerResponse.self) { data in
+            completion(data.value)
+        }
+    }
+    
     func updateFood(food_id: String, token: String, newModel:FoodEditableModel, completion: @escaping(UpdateFoodServerResponse?) -> Void) {
         let parameters = ["name": newModel.name,
                           "food_category_id": newModel.food_category_id,

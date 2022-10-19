@@ -11,6 +11,8 @@ target 'MamaKitchenApp' do
     pod 'CountryPickerView', '~> 3.2.0'
     pod 'Kingfisher'
     pod 'OTPFieldView'
+    pod 'SkeletonView'
+    pod 'iOSDropDown'
 
   target 'MamaKitchenAppTests' do
     inherit! :search_paths

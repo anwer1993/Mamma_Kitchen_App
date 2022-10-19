@@ -105,3 +105,30 @@ struct NewFoodModel: Codable {
     let time_preparing: Int
     let picture: Data?
 }
+
+// MARK: - FoodCategoryServerResponse
+struct FoodCategoryServerResponse: Codable {
+    let result: Bool?
+    let message: String?
+    let data: [FoodCategoryDatum]?
+}
+
+// MARK: - Datum
+struct FoodCategoryDatum: Codable {
+    let id: Int?
+    let name: String?
+    let picture: Picture?
+    let color: Color?
+}
+
+enum Color: String, Codable {
+    case ff5733 = "#FF5733"
+    case the3347Ff = "#3347ff"
+    case the8Aff33 = "#8AFF33"
+}
+
+enum Picture: String, Codable {
+    case categoriesHamburgerPNG = "categories/hamburger.png"
+    case categoriesPizzaPNG = "categories/pizza.png"
+    case categoriesSweetsPNG = "categories/sweets.png"
+}

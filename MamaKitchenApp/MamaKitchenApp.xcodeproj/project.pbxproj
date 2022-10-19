@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0CECD2E82179830BB9D08F29 /* Pods_MamaKitchenApp_MamaKitchenAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF4F2DE1240BAE6C115B18D /* Pods_MamaKitchenApp_MamaKitchenAppUITests.framework */; };
 		A55C8C23E2C793B942D58748 /* Pods_MamaKitchenAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED74C68D1A7673D7FC817B1 /* Pods_MamaKitchenAppTests.framework */; };
+		A60F8FAB29009ADE009688AC /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60F8FAA29009ADE009688AC /* LocationViewController.swift */; };
+		A60F8FAE2900B0F2009688AC /* UpdateLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60F8FAD2900B0F2009688AC /* UpdateLocationDelegate.swift */; };
 		A61C1CDA28E24435005FD708 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61C1CD928E24434005FD708 /* TabbarViewController.swift */; };
 		A65935A828E4EFC3004A5A83 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65935A728E4EFC3004A5A83 /* StringExtension.swift */; };
 		A65935AB28E4F5F1004A5A83 /* SettinngsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65935AA28E4F5F1004A5A83 /* SettinngsViewController.swift */; };
@@ -41,6 +43,8 @@
 		A66F54CE28E11E3A00AA29A0 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66F54CD28E11E3A00AA29A0 /* AccountManager.swift */; };
 		A66F54D128E123D000AA29A0 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66F54D028E123D000AA29A0 /* RegisterData.swift */; };
 		A66F54D328E123E200AA29A0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66F54D228E123E200AA29A0 /* RegisterViewController.swift */; };
+		A671EAFB28F6159C006AC62A /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A671EAFA28F6159C006AC62A /* HomeTableView.swift */; };
+		A671EAFE28F615E8006AC62A /* FoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A671EAFD28F615E8006AC62A /* FoodsCell.swift */; };
 		A677655A28E9E5D6008A947A /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677655928E9E5D6008A947A /* ContactUsViewController.swift */; };
 		A677655C28EA1086008A947A /* SourceEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677655B28EA1086008A947A /* SourceEnum.swift */; };
 		A677655E28EA1111008A947A /* ProfileServerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677655D28EA1111008A947A /* ProfileServerResponseModel.swift */; };
@@ -49,6 +53,8 @@
 		A67DF5BC28F3021900BC991B /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF5BB28F3021900BC991B /* FoodService.swift */; };
 		A67DF5BE28F3028700BC991B /* FoodServerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DF5BD28F3028700BC991B /* FoodServerResponseModel.swift */; };
 		A67E318528E12E99003D6DEA /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67E318428E12E99003D6DEA /* UIImageViewExtension.swift */; };
+		A6DA179328F62930008A3B0E /* AddNewFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA179228F62930008A3B0E /* AddNewFoodViewController.swift */; };
+		A6DA179528F6434A008A3B0E /* AddNewFoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA179428F6434A008A3B0E /* AddNewFoodData.swift */; };
 		A6E4C64928E107AD0072F108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E4C64728E107AD0072F108 /* Main.storyboard */; };
 		A6E4C64B28E107AE0072F108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6E4C64A28E107AE0072F108 /* Assets.xcassets */; };
 		A6E4C64E28E107AE0072F108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E4C64C28E107AE0072F108 /* LaunchScreen.storyboard */; };
@@ -84,6 +90,8 @@
 		4ED74C68D1A7673D7FC817B1 /* Pods_MamaKitchenAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MamaKitchenAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		670DBDD6F1C189C7BA1B0C96 /* Pods-MamaKitchenApp-MamaKitchenAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaKitchenApp-MamaKitchenAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MamaKitchenApp-MamaKitchenAppUITests/Pods-MamaKitchenApp-MamaKitchenAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		983F1BBD67C58F1A6407550F /* Pods-MamaKitchenAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaKitchenAppTests.release.xcconfig"; path = "Target Support Files/Pods-MamaKitchenAppTests/Pods-MamaKitchenAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A60F8FAA29009ADE009688AC /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		A60F8FAD2900B0F2009688AC /* UpdateLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateLocationDelegate.swift; sourceTree = "<group>"; };
 		A61C1CD928E24434005FD708 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		A65935A728E4EFC3004A5A83 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		A65935AA28E4F5F1004A5A83 /* SettinngsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettinngsViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +125,8 @@
 		A66F54CD28E11E3A00AA29A0 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		A66F54D028E123D000AA29A0 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
 		A66F54D228E123E200AA29A0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A671EAFA28F6159C006AC62A /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
+		A671EAFD28F615E8006AC62A /* FoodsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCell.swift; sourceTree = "<group>"; };
 		A677655928E9E5D6008A947A /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		A677655B28EA1086008A947A /* SourceEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEnum.swift; sourceTree = "<group>"; };
 		A677655D28EA1111008A947A /* ProfileServerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServerResponseModel.swift; sourceTree = "<group>"; };
@@ -125,6 +135,8 @@
 		A67DF5BB28F3021900BC991B /* FoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
 		A67DF5BD28F3028700BC991B /* FoodServerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodServerResponseModel.swift; sourceTree = "<group>"; };
 		A67E318428E12E99003D6DEA /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		A6DA179228F62930008A3B0E /* AddNewFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFoodViewController.swift; sourceTree = "<group>"; };
+		A6DA179428F6434A008A3B0E /* AddNewFoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFoodData.swift; sourceTree = "<group>"; };
 		A6E4C63E28E107AD0072F108 /* MamaKitchenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MamaKitchenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E4C64828E107AD0072F108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6E4C64A28E107AE0072F108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,6 +191,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A60F8FA929009ACA009688AC /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				A60F8FAA29009ADE009688AC /* LocationViewController.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		A60F8FAC2900B0DC009688AC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A60F8FAD2900B0F2009688AC /* UpdateLocationDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		A65935A928E4F5E0004A5A83 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				A65935B228E50AD4004A5A83 /* HomeViewController.swift */,
+				A671EAFA28F6159C006AC62A /* HomeTableView.swift */,
 				A677656328EA1802008A947A /* HomeData.swift */,
 			);
 			path = Home;
@@ -278,6 +307,7 @@
 		A66F54B928E10AA400AA29A0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A6DA179128F6291D008A3B0E /* AddNewFood */,
 				A61C1CD928E24434005FD708 /* TabbarViewController.swift */,
 				A65935B028E50ABC004A5A83 /* Home */,
 				A65935B128E50AC4004A5A83 /* Orders */,
@@ -342,6 +372,14 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		A671EAFC28F615DC006AC62A /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				A671EAFD28F615E8006AC62A /* FoodsCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		A677655828E9E5C1008A947A /* ContactUs */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,11 +391,21 @@
 		A677656228EA17EC008A947A /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				A60F8FA929009ACA009688AC /* Location */,
 				A66F54CF28E123C200AA29A0 /* Register */,
 				A66F54C828E1133500AA29A0 /* Verification */,
 				A66F54BA28E10AB000AA29A0 /* SignIn */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		A6DA179128F6291D008A3B0E /* AddNewFood */ = {
+			isa = PBXGroup;
+			children = (
+				A6DA179228F62930008A3B0E /* AddNewFoodViewController.swift */,
+				A6DA179428F6434A008A3B0E /* AddNewFoodData.swift */,
+			);
+			path = AddNewFood;
 			sourceTree = "<group>";
 		};
 		A6E4C63528E107AD0072F108 = {
@@ -388,6 +436,8 @@
 				A66F548A28E108DC00AA29A0 /* SceneDelegate.swift */,
 				A66F548628E108DC00AA29A0 /* AppDelegate.swift */,
 				A66F548E28E108DC00AA29A0 /* SpalchScreen.swift */,
+				A60F8FAC2900B0DC009688AC /* Protocol */,
+				A671EAFC28F615DC006AC62A /* cells */,
 				A66F54B328E10A7D00AA29A0 /* Manager */,
 				A66F54C228E10AEF00AA29A0 /* Utilities */,
 				A66F54BF28E10ACD00AA29A0 /* Services */,
@@ -674,6 +724,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A65935AD28E50353004A5A83 /* SettingsData.swift in Sources */,
+				A60F8FAE2900B0F2009688AC /* UpdateLocationDelegate.swift in Sources */,
 				A66F549228E108DD00AA29A0 /* AppDelegate.swift in Sources */,
 				A66F54AD28E10A6B00AA29A0 /* UITextFieldExtension.swift in Sources */,
 				A67DF5BC28F3021900BC991B /* FoodService.swift in Sources */,
@@ -696,15 +747,20 @@
 				A66F54C528E10AF900AA29A0 /* CustomTextField.swift in Sources */,
 				A66F54BD28E10AB900AA29A0 /* SignInData.swift in Sources */,
 				A66F54BE28E10AB900AA29A0 /* SignInViewController.swift in Sources */,
+				A6DA179328F62930008A3B0E /* AddNewFoodViewController.swift in Sources */,
 				A67E318528E12E99003D6DEA /* UIImageViewExtension.swift in Sources */,
+				A6DA179528F6434A008A3B0E /* AddNewFoodData.swift in Sources */,
 				A66F54D328E123E200AA29A0 /* RegisterViewController.swift in Sources */,
+				A60F8FAB29009ADE009688AC /* LocationViewController.swift in Sources */,
 				A66F54D128E123D000AA29A0 /* RegisterData.swift in Sources */,
+				A671EAFB28F6159C006AC62A /* HomeTableView.swift in Sources */,
 				A66F54CA28E1134500AA29A0 /* VerificationData.swift in Sources */,
 				A677655E28EA1111008A947A /* ProfileServerResponseModel.swift in Sources */,
 				A66F54B828E10A9B00AA29A0 /* AuthServerResponseModels.swift in Sources */,
 				A65935B928E51B06004A5A83 /* AboutUsViewController.swift in Sources */,
 				A66F54B028E10A6B00AA29A0 /* UIButtonExtension.swift in Sources */,
 				A66F54AE28E10A6B00AA29A0 /* UILabelExtension.swift in Sources */,
+				A671EAFE28F615E8006AC62A /* FoodsCell.swift in Sources */,
 				A677656028EA1243008A947A /* ProfileService.swift in Sources */,
 				A65935B528E50AF1004A5A83 /* OrdersViewController.swift in Sources */,
 				A66F54B128E10A6B00AA29A0 /* UIColorExtension.swift in Sources */,
@@ -891,9 +947,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WUP2ZUK4VP;
+				DEVELOPMENT_TEAM = KQ663356A4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MamaKitchenApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "we need your location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "we need your location";
+				INFOPLIST_KEY_NSLocationUsageDescription = "we need your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "we need your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -904,7 +964,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-MamaKitchenApp.MamaKitchenApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MamaKitchenApp.MamaKitchenApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -925,9 +985,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WUP2ZUK4VP;
+				DEVELOPMENT_TEAM = KQ663356A4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MamaKitchenApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "we need your location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "we need your location";
+				INFOPLIST_KEY_NSLocationUsageDescription = "we need your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "we need your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -938,7 +1002,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-MamaKitchenApp.MamaKitchenApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MamaKitchenApp.MamaKitchenApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

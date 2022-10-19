@@ -1,28 +1,36 @@
 PODS:
   - Alamofire (5.6.2)
   - CountryPickerView (3.2.0)
+  - iOSDropDown (0.4.0)
   - Kingfisher (7.3.2)
   - OTPFieldView (1.0.1)
+  - SkeletonView (1.30.3)
 
 DEPENDENCIES:
   - Alamofire
   - CountryPickerView (~> 3.2.0)
+  - iOSDropDown
   - Kingfisher
   - OTPFieldView
+  - SkeletonView
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - CountryPickerView
+    - iOSDropDown
     - Kingfisher
     - OTPFieldView
+    - SkeletonView
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   CountryPickerView: 9b093bfffb4b06a69ba6185a798cadbf863720e7
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   Kingfisher: 0086ad83719761ba9b2cdaf6ef4d5b4878cbae23
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
+  SkeletonView: f5b099c708e42a278079a12bcaaf71c303be65a3
 
-PODFILE CHECKSUM: 95db8042d8c6923479856b00cbc01396bf872b59
+PODFILE CHECKSUM: d4774331576f7f6a72b2421c3552ef1e36a5ac84
 
 COCOAPODS: 1.11.2

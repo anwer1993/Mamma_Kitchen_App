@@ -36,6 +36,15 @@ extension UITextField {
         self.rightViewMode = .always
     }
     
+//    func setRightView(image: UIImage?) {
+//        let button = UIButton(type: .custom)
+//        button.setImage(image, for: .normal)
+//        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -16, bottom: 0, right: -5)
+//        button.frame = CGRect(x: CGFloat(self.frame.size.width - 20), y: CGFloat(10), width: CGFloat(20), height: CGFloat(20))
+//        self.rightView = button
+//        self.rightViewMode = .always
+//    }
+    
     @IBAction func togglePasswordView(_ sender: Any) {
         self.isSecureTextEntry = !self.isSecureTextEntry
         setPasswordToggleImage(sender as! UIButton)

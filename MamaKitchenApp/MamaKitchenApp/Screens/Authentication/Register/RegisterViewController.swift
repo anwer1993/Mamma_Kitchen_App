@@ -7,6 +7,8 @@
 
 import UIKit
 import Kingfisher
+import MapKit
+import CoreLocation
 
 class RegisterViewController: UIViewController, Storyboarded {
     
@@ -61,6 +63,7 @@ class RegisterViewController: UIViewController, Storyboarded {
             self.profile =  AccountManager.sharedInstance.profile
             loginLabel.isHidden = true
         }
+        adressTextField.addTarget(self, action: #selector(selectLocation), for: .touchDown)
         // Do any additional setup after loading the view.
     }
     
@@ -68,6 +71,19 @@ class RegisterViewController: UIViewController, Storyboarded {
         super.viewWillAppear(animated)
         if source == .fromSettings {
             getProfile()
+        }
+    }
+    
+    @objc func selectLocation() {
+        let locationManager = CLLocationManager()
+        // Ask for Authorisation from the User.
+        locationManager.requestAlwaysAuthorization()
+        // For use in foreground
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            Router.shared.present(screen: .SelectLocation(delegate: self), modalePresentatioinStyle: .fullScreen, completion: nil)
+        } else {
+            showAlert(for: "You should enable service location in your device")
         }
     }
     
@@ -86,6 +102,7 @@ class RegisterViewController: UIViewController, Storyboarded {
         passwordTextField.setuptextField(delegate: self, type: .default)
         phoneTextField.setuptextField(delegate: self, type: .emailAddress)
         emailTextField.setuptextField(delegate: self, type: .emailAddress)
+        adressTextField.delegate  = self
         passwordTextField.enablePasswordToggle()
         emailLbl.textColor = .macaroonYellow
         passwordLbl.textColor = .macaroonYellow
@@ -170,6 +187,32 @@ extension RegisterViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == adressTextField {
+                return false
+        }
+        return true
+    }
+    
+}
+
+
+extension RegisterViewController: UpdateLocationDelegate {
+    
+    func updateLocation(latitude: Double, longitude: Double, address: String) {
+        self.profile?.latitude = "\(latitude)"
+        self.profile?.longitude = "\(longitude)"
+        self.profile?.address = address
+        self.adressTextField.text = address
+        print(self.profile?.latitude)
+        print(self.profile?.longitude)
+        print(self.profile?.address)
     }
     
 }

@@ -18,6 +18,7 @@ enum URLRequest {
     case GET_FOODS
     case ADD_FOOD
     case UPDATE_FOOD(id: String)
+    case FOOD_CAT_URL
     
     var url: String {
         switch self {
@@ -37,6 +38,8 @@ enum URLRequest {
             return "\(Tools.BASE_URL)api/v1/restaurant/food/add/fr?token="
         case .UPDATE_FOOD(id: let food_id):
             return "\(Tools.BASE_URL)api/v1/restaurant/food/update/\(food_id)/fr"
+        case .FOOD_CAT_URL:
+            return "https://echo.sa/projects/MamasKitchen/public/api/v1/general/categories/en"
         }
     }
 }

@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import SkeletonView
 
 class HomeViewController: UIViewController {
 
     
     
+    @IBOutlet weak var addImage: UIImageView!
+    @IBOutlet weak var addFoodView: UIView!
+    @IBOutlet weak var foodTableView: UITableView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet var titleView: UIView!
     
@@ -24,8 +28,24 @@ class HomeViewController: UIViewController {
     func initView() {
         titleView.layer.backgroundColor = UIColor.kelleyGreen.cgColor
         titleLbl.textColor = .white
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleAddFoodTap(_:)))
+        addFoodView.addTagGesture(tap)
+        addFoodView.layer.cornerRadius = addFoodView.frame.width * 0.5
+        addFoodView.backgroundColor = .macaroonYellow
+        addFoodView.applySketchShadow(color: .black37, alpha: 1, x: 0, y: 5, blur: 10, spread: 0)
+        self.addFoodView.isHidden = true
+        foodTableView.dataSource = self
+        self.foodTableView.showAnimatedSkeleton(usingColor: .kelleyGreen, animation: .none, transition: .crossDissolve(5.0))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            self.foodTableView.hideSkeleton()
+            self.foodTableView.reloadData()
+            self.addFoodView.isHidden = false
+        }
     }
     
+    @objc func handleAddFoodTap(_ sender: UITapGestureRecognizer? = nil) {
+        Router.shared.present(screen: .AddNewFood, modalePresentatioinStyle: .fullScreen, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

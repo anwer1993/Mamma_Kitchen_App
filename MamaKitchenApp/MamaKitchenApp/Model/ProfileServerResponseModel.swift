@@ -9,23 +9,23 @@ import Foundation
 
 // MARK: - ProfileServerResponse
 struct ProfileServerResponse: Codable {
-    let result: Bool?
-    let message: String?
-    let data: ProfileModel?
+    var result: Bool?
+    var message: String?
+    var data: ProfileModel?
 }
 
 // MARK: - DataClass
 struct ProfileModel: Codable {
-    let id: Int?
-    let firstName, lastName, phone, restaurantName: String?
-    let picture, code, deviceToken, email: String?
-    let address, longitude, latitude: String?
-    let emailVerifiedAt: String?
-    let idNumber: String?
-    let idPicture, bank, iban: String?
-    let isPhoneVerified, isApproved, isActive, isBanned: String?
-    let isNotifiable: Int?
-    let userType, createdAt, updatedAt: String?
+    var id: Int?
+    var firstName, lastName, phone, restaurantName: String?
+    var picture, code, deviceToken, email: String?
+    var address, longitude, latitude: String?
+    var emailVerifiedAt: String?
+    var idNumber: String?
+    var idPicture, bank, iban: String?
+    var isPhoneVerified, isApproved, isActive, isBanned: String?
+    var isNotifiable: Int?
+    var userType, createdAt, updatedAt: String?
 
     enum CodingKeys: String, CodingKey {
         case id
